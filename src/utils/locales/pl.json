@@ -1,0 +1,22 @@
+{
+	"mainHeader": {
+		"info": "Boilerplate #"
+	},
+	"default": {
+		"selectLanguage": "Wybierz język",
+		"user": "Użytkownik",
+		"account": "Konto"
+	},
+	"settings": {
+		"logged": "Zalogowany na portfel:"
+	},
+	"menu": {
+		"account": "Konto",
+		"connected": "Połączony",
+		"homePage": "Strona główna",
+		"connect": "Połącz"
+	},
+	"profileMenu": {
+		"account": "Konto"
+	}
+}

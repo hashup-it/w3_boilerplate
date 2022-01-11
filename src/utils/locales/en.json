@@ -1,0 +1,22 @@
+{
+	"mainHeader": {
+		"info": "Boilerplate #"
+	},
+	"default": {
+		"selectLanguage": "Select language",
+		"user": "User",
+		"account": "Account"
+	},
+	"settings": {
+		"logged": "Logged in to the wallet:"
+	},
+	"menu": {
+		"account": "Account",
+		"connected": "Connected",
+		"homePage": "Home Page",
+		"connect": "Connect"
+	},
+	"profileMenu": {
+		"account": "Account"
+	}
+}
