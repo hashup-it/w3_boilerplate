@@ -1,14 +1,18 @@
 // @ts-nocheck
-import React, { useCallback, useEffect, useReducer, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useReducer, useState } from 'react';
 import { isWeb3, isMetaMask, getAccounts, loginToMetaMask, chainIdtoName } from './web3-utils';
 import { ethers } from 'ethers';
 import { BlockchainWeb3InitialState, BlockchainWeb3Reducer } from './blockchainReducer';
+import ExampleContract from '../../Contracts/Example/contract.json';
+import ExampleAddress from '../../Contracts/Example/address';
 
 export const BlockchainProvider = ({ children }: any) => {
 	const [isCheckOfWeb3, handleIsCheckedWeb3] = useState(false);
 	const [web3State, web3Dispatch] = useReducer<any>(BlockchainWeb3Reducer, BlockchainWeb3InitialState);
 
 	const dispatch = (action: any) => web3Dispatch(action);
+
+	const postContract = useMemo(() => new ethers.Contract(ExampleAddress, ExampleContract, web3State.signer), [web3State.signer]);
 
 	const login = useCallback(async () => {
 		try {
